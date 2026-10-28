@@ -1,0 +1,11 @@
+{
+  "name": "twiglles-zp",
+  "version": "1.0.0",
+  "description": "Калькулятор ЗП менеджеров Твиглс: страница входа и зашифрованное приложение",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test"
+  }
+}
