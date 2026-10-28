@@ -6,6 +6,6 @@
 
 ## Публикация на GitHub Pages
 
-Settings → Pages → Source: **Deploy from a branch**, ветка `main`, папка `/ (root)`. Сайт появится по адресу `https://twiglles.github.io/zp/`.
+Settings → Pages → Source: **GitHub Actions**. Workflow `.github/workflows/pages.yml` сам публикует сайт после каждого коммита в `main` (запускает тесты и выкладывает `index.html` и `app.enc.json`). Сайт будет по адресу `https://twiglles.github.io/zp/`.
 
 
