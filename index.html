@@ -49,6 +49,7 @@ label{display:flex;gap:8px;align-items:center;margin-top:12px;font-size:13px;col
     errEl.textContent=silent?'':'Проверяю…';
     decrypt(pin).then(function(html){
       try{if(remember)localStorage.setItem(KEY,pin);else localStorage.removeItem(KEY)}catch(e){}
+      try{localStorage.setItem('zp_code',JSON.stringify(pin))}catch(e){} /* тот же пароль служит кодом доступа к таблице */
       open(html);
     },function(e){
       if(silent){try{localStorage.removeItem(KEY)}catch(x){}errEl.textContent='';return}
