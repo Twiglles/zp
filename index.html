@@ -2,37 +2,43 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <meta name="googlebot" content="noindex,nofollow">
 <meta name="theme-color" content="#0f0f0f">
 <title>Расчёт ЗП — вход</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%239A1F1F%22/%3E%3Cpath d=%22M15 16h34v10H38.5v24h-13V26H15z%22 fill=%22%23F5F3F0%22/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACMklEQVR4nOzbsUmkYRRA0W9lFsFs2QImNTDZNjYWrEMsQCxAzO1AMLYGYQQTFcEKDFRMDDTRAuZmOj8M5zTwkst70ZudzucDltkYEMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHKTZmNT/87M/29uDZV7u7y9298Z0bA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIE38K3t5ePR7a2t8t787O/8O9seqXB+fPN3cjO/28fY2JjVxHM+3d+MHbGxujhV6eXh4XFyNteOskMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkGZjHb2/vj4uFmNVvsaNdfTrdD4fsIyzQhIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIH6RMAAP//CelvYQAAAAZJREFUAwC//SPvwHNdqQAAAABJRU5ErkJggg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
+:root{color-scheme:dark;--bg:#0f0f0f;--panel:#1c1c1c;--line:#333330;--ink:#f2f0ea;--ink-secondary:#b6b3ac;--ink-muted:#85827b;--accent:#9a1f1f;--accent-soft:rgba(154,31,31,.16);--font:"Montserrat",-apple-system,"Segoe UI",sans-serif}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:rgb(15,15,15);color:#F5F3F0;font:400 16px/1.45 Montserrat,system-ui,-apple-system,Segoe UI,sans-serif}
-.box{width:100%;max-width:380px;margin:20px;background:rgb(39,39,39);border:1px solid rgba(245,243,240,.14);border-radius:16px;padding:26px}
-.brand{font:400 18px 'Archivo Black',Impact,sans-serif;letter-spacing:.01em;text-transform:uppercase;margin-bottom:18px}
-h1{font-size:28px;line-height:1.05;font-weight:800;margin:0 0 6px}
-p{color:rgba(245,243,240,.7);margin:0 0 18px;font-size:14px}
-input[type=password],input[type=text]{width:100%;font:inherit;font-size:20px;letter-spacing:.2em;padding:13px;border:1px solid rgba(245,243,240,.14);border-radius:4px;background:rgb(24,24,24);color:#F5F3F0}
-input:focus{outline:none;border-color:rgb(178,42,42);box-shadow:0 0 0 1px rgb(178,42,42)}
-button{width:100%;margin-top:12px;font:700 16px inherit;padding:13px;border:0;border-radius:4px;background:rgb(154,31,31);color:#fff;cursor:pointer}
-button:hover{background:rgb(178,42,42)}
-label{display:flex;gap:8px;align-items:center;margin-top:12px;font-size:13px;color:rgba(245,243,240,.7)}
-#err{color:#ff9a8a;font-size:14px;min-height:20px;margin-top:10px}
+html{-webkit-tap-highlight-color:transparent}
+body{margin:0;font-size:14px;background:radial-gradient(ellipse 900px 500px at 88% -10%,rgba(154,31,31,.10),transparent 60%),var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+::selection{background:var(--accent);color:#fff}
+:focus-visible{outline:2px solid #ff8f8f;outline-offset:2px}
+.gate-card{width:100%;max-width:360px}
+.brandmark{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px}
+.brandmark .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.brandmark span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);font-weight:600}
+h1{font-family:var(--font);font-weight:700;font-size:28px;line-height:1.15;margin:0 0 22px;letter-spacing:-.01em;text-wrap:balance;background:linear-gradient(100deg,var(--ink) 55%,#ff8f8f 130%);-webkit-background-clip:text;background-clip:text;color:transparent}
+input[type=password]{width:100%;height:52px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:600 20px var(--font);letter-spacing:.3em;padding:0 16px;outline:none}
+input[type=password]:focus{border-color:var(--accent)}
+button{width:100%;height:52px;margin-top:12px;border:0;border-radius:10px;background:var(--accent);color:#fff;font:600 16px var(--font);cursor:pointer}
+.gate-row{display:flex;align-items:center;gap:10px;margin-top:14px;color:var(--ink-secondary);font-size:14px}
+.gate-row input{width:18px;height:18px;accent-color:var(--accent)}
+#err{min-height:20px;margin-top:12px;color:#e26a6a;font-size:14px}
 </style>
 </head>
 <body>
-<form class="box" id="f" autocomplete="off">
-  <div class="brand">Twiglles</div>
+<form class="gate-card" id="f" autocomplete="off">
+  <div class="brandmark"><span class="dot"></span><span>Твиглс · отдел продаж</span></div>
   <h1>Расчёт зарплаты</h1>
-  <p>Введите пароль доступа.</p>
-  <input id="pin" type="password" inputmode="numeric" autocomplete="off" autofocus placeholder="••••">
-  <label><input type="checkbox" id="rem" checked> Запомнить на этом устройстве</label>
-  <div id="err"></div>
-  <button type="submit">Войти</button>
+  <input id="pin" type="password" inputmode="numeric" autocomplete="off" placeholder="Пароль" aria-label="Пароль" autofocus>
+  <button type="submit">Открыть</button>
+  <label class="gate-row"><input type="checkbox" id="rem" checked> Запомнить на этом устройстве</label>
+  <div id="err" role="alert"></div>
 </form>
 <script>
 (function(){
